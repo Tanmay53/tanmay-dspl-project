@@ -16,4 +16,10 @@ Create below application using Laravel and any of JS framework( Vue, Nuxt , Reac
 2. Submit that number by API( API call should be in JS framework) and in response open a pop up like below message.
 
 > Calling...
-> 9123123123  
+> 9123123123
+
+## Setup 
+
+php artisan migrate
+
+php artisan serve
