@@ -18,6 +18,16 @@ class ContactController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     */
+    public function indexAjax()
+    {
+        $contacts = Contact::latest()->get();
+
+        return view('contacts.view-ajax', compact('contacts'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -39,6 +49,12 @@ class ContactController extends Controller
             'name' => $request->name,
             'email' => $request->email
         ]);
+
+        if( $request->expectsJson() ) {
+            return response()->json([
+                'success' => true
+            ]);
+        }
 
         return redirect()->route('contacts');
     }
@@ -74,6 +90,12 @@ class ContactController extends Controller
             'email' => $request->email
         ]);
 
+        if( request()->expectsJson() ) {
+            return response()->json([
+                'success' => true
+            ]);
+        }
+
         return redirect()->route('contacts');
     }
 
@@ -83,6 +105,12 @@ class ContactController extends Controller
     public function destroy(Contact $contact)
     {
         $contact->delete();
+
+        if( request()->expectsJson() ) {
+            return response()->json([
+                'success' => true
+            ]);
+        }
 
         return redirect()->route('contacts');
     }

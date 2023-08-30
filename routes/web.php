@@ -15,10 +15,11 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('contacts');
 });
 
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+Route::get('/contacts-ajax', [ContactController::class, 'indexAjax'])->name('contacts-ajax');
 Route::post('/contact', [ContactController::class, 'store'])->name('add-contact');
 Route::delete('/contact/{contact}', [ContactController::class, 'destroy'])->name('delete-contact');
 Route::patch('/contact/{contact}', [ContactController::class, 'update'])->name('update-contact');
