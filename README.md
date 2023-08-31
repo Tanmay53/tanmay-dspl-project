@@ -22,6 +22,21 @@ Create below application using Laravel and any of JS framework( Vue, Nuxt , Reac
 
 ## Setup 
 
-php artisan migrate
+Execute the following steps:
 
-php artisan serve
+1. Clone the repository.
+2. Run `cd tanmay-dspl-project`
+3. Run `cp .env.example .env` to create the .env file.
+4. Create and new database on localhost.
+5. Add the database configurations to the .env file.
+6. Run `php artisan migrate`
+7. Run `npm install`
+8. Run `php artisan serve`
+9. Open new terminal
+10. Run `npm run dev`
+
+Visit following URLs to view the project
+
+1. Task 1 POST: http://localhost:8000/contacts
+2. Task 1 AJAX: http://localhost:8000/contacts-ajax
+3. Task 2 Dialpad: http://localhost:8000/dialpad

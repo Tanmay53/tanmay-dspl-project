@@ -58,9 +58,7 @@ const toast = useToast()
 export default {
     data() {
         return {
-            callNumber: "",
-            error: "",
-            modal: null
+            callNumber: ""
         }
     },
     mounted() {
@@ -71,7 +69,7 @@ export default {
             this.callNumber += digit
         },
         call() {
-            if( this.callNumber.length > 10 ) {
+            if( this.callNumber.length >= 10 ) {
                 this.error = ""
 
                 $.ajax({
@@ -93,8 +91,7 @@ export default {
                     }
                 })
             } else {
-                this.error = "Enter at least 10 digits"
-                toast.error(this.error, {
+                toast.error("Enter at least 10 digits", {
                     position: "top-right"
                 })
             }
