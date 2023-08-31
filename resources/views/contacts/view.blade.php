@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('body')
     <div class="bg-white rounded m-3 p-5" id="index">

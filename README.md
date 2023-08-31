@@ -1,6 +1,5 @@
 # Project for DSPL
 
-
 ## Task: 1
 
 CRUD operation -> Create a CRUD operation module with 2 method's
@@ -16,7 +15,10 @@ Create below application using Laravel and any of JS framework( Vue, Nuxt , Reac
 2. Submit that number by API( API call should be in JS framework) and in response open a pop up like below message.
 
 > Calling...
+> 
 > 9123123123
+
+![Dialer Pad](public/images/dialer-pad.jpg)
 
 ## Setup 
 

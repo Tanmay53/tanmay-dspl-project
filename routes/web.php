@@ -23,3 +23,7 @@ Route::get('/contacts-ajax', [ContactController::class, 'indexAjax'])->name('con
 Route::post('/contact', [ContactController::class, 'store'])->name('add-contact');
 Route::delete('/contact/{contact}', [ContactController::class, 'destroy'])->name('delete-contact');
 Route::patch('/contact/{contact}', [ContactController::class, 'update'])->name('update-contact');
+
+Route::get('/dialpad', function() {
+    return view('dialpad');
+});
